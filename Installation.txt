@@ -65,6 +65,10 @@ Before starting "make", your Linux PC must have the following libraries:
 	libXm  (and /usr/include/Xm) for "simeye" and "helios",
 	libXt  (the X toolkit library).
 
+On Ubuntu 20.04 (some of) these can be installed by running:
+
+	% sudo apt install libmotif-dev
+
 Normally, shared object (.so) libraries are used from "/usr/lib64".
 Your PC also needs to have installed the GNU C-compiler (gcc, g++).
 

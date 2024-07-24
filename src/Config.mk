@@ -8,7 +8,7 @@ LEX = /usr/bin/flex
 YACC= /usr/bin/bison
 
 # -D_FILE_OFFSET_BITS=64
-OCFLAGS=-fPIC -O
+OCFLAGS=-fPIC -g
 LDFLAGS=-fPIC -s -L/usr/lib64
 
 QTLIB=/usr/lib64/qt-3.3
