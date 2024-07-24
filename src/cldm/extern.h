@@ -51,7 +51,7 @@ extern char    layer[];
 
 extern int     sfx, sfy;
 extern int     lay_code;
-extern size_t  yyleng;
+extern int     yyleng;
 extern int     yylineno;
 extern int     err_cnt;
 extern int     err_flag;

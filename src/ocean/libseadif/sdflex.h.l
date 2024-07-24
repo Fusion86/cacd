@@ -164,7 +164,7 @@ int sdfdodelayedcopy (int charstoleave)
 
 PRIVATE void sdfrecordlong ()
 {
-    extern size_t yyleng;
+    extern int yyleng;
     extern char  *yytext;
     register char *intext;
     register int j;
