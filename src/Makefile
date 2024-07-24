@@ -5,9 +5,9 @@ TARGETS= addproj cacdcmap cfun cldm cmsk csls \
 	dali dbcat dbclean dblist device drc \
 	exp flatten gds2 getlld getproc impcell man \
 	macro makeboxh makeboxl makevln match mkpr \
-	net2net nspice ocean GoWithTheFlow putdevmod \
+	net2net nspice ocean putdevmod \
 	rmdb rmpr simeye simeye2 sls sls_exp slsmodgen \
-	space helios process spice3 spock subresgen \
+	space helios process spice3 subresgen \
 	utilities xcontrol xedif xnle xsls xspf xspice xvhdl
 
 # Note that file Config.mk is used!
@@ -18,7 +18,7 @@ TARGETS= addproj cacdcmap cfun cldm cmsk csls \
 install: testicd libs
 	@for dir in $(TARGETS); do \
 		echo "### Building targets in" $$dir; \
-		make -C $$dir; \
+		make -C $$dir || exit; \
 	done
 
 testicd:

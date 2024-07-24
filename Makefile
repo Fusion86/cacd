@@ -17,6 +17,8 @@ install: init
 	echo 'setenv PATH $$ICDPATH/bin:$$PATH' >> $(ICDPATH)/sourceme.csh
 	echo "export ICDPATH=$(ICDPATH)" > $(ICDPATH)/sourceme.bash
 	echo 'export PATH=$$ICDPATH/bin:$$PATH' >> $(ICDPATH)/sourceme.bash
+	echo "set -x ICDPATH $(ICDPATH)" > $(ICDPATH)/sourceme.fish
+	echo 'set -x PATH $$ICDPATH/bin $$PATH' >> $(ICDPATH)/sourceme.fish
 	make -C src
 	@echo "### Ready"
 init:
