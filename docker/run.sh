@@ -1,0 +1,1 @@
+docker run --rm -ti --net=host -e DISPLAY=:0 -it tudelft-space-cacd /bin/bash
