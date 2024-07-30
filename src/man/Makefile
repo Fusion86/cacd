@@ -15,12 +15,12 @@ install: whatis
 	  echo "### update $(TARGET_MAN)/cat$$i/$$i.$$i";\
 	  sh ../update $$i > $(TARGET_MAN)/cat$$i/$$i.$$i;\
 	  for f in *.$$i; do \
-	  if [ $$f -nt $(TARGET_MAN)/cat$$i/$$f ]; then \
+	#   if [ $$f -nt $(TARGET_MAN)/cat$$i/$$f ]; then \
 		echo "### update $(TARGET_DOC)/$$f.pdf";\
 		groff -t -Tps -c ../tmac.icd3.A4 $$f | ps2pdf - $(TARGET_DOC)/$$f.pdf;\
 		echo "### update $(TARGET_MAN)/cat$$i/$$f";\
 		groff -t -Tascii -P-c ../tmac.icd3.A4 $$f > $(TARGET_MAN)/cat$$i/$$f;\
-	  fi;\
+	#   fi;\
 	  done;\
 	  cd ..;\
 	done
